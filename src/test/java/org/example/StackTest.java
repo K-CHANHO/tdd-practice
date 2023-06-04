@@ -24,34 +24,50 @@ class StackTest {
 
         // Assert
         Assertions.assertEquals(0, stack.size());
+        Assertions.assertEquals(null, stack.head());
+
     }
 
     @Test
     public void stack_init_with_values() {
         // Arrange, Act
-        Stack stack = new Stack(new ArrayList<Integer>(Arrays.asList(1,2,3)));
+        Stack stack = new Stack(new ArrayList<Integer>(Arrays.asList(5,6,7)));
 
         // Assert
         Assertions.assertEquals(3, stack.size());
+        Assertions.assertEquals(7, stack.head());
+
     }
 
     @Test
-    public void empty_stack_head() {
-        // Arrange, Act
+    public void stack_push_one_value() {
+        // Arrange
         Stack stack = new Stack();
 
-        // Asssert
-        Assertions.assertEquals(null, stack.head());
+        // Act
+        stack.push(3);
+
+        // Assertion
+        Assertions.assertEquals(3, stack.head());
+        Assertions.assertEquals(1, stack.size());
     }
 
     @Test
-    public void filled_stack_head() {
-        // Arrange, Act
-        Stack stack = new Stack(new ArrayList<Integer>(Arrays.asList(1,2,3)));
+    public void stack_push_many_values() {
+        // Arrange
+        Stack stack = new Stack();
 
-        // Asssert
-        Assertions.assertEquals(3, stack.head());
+        // Act
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        stack.push(6);
+
+        // Assertion
+        Assertions.assertEquals(6, stack.head());
+        Assertions.assertEquals(4, stack.size());
     }
+
 
 
 

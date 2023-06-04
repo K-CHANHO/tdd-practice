@@ -25,4 +25,8 @@ public class Stack {
 
         return stack.get(stack.size()-1);
     }
+
+    public void push(int i) {
+        stack.add(i);
+    }
 }
