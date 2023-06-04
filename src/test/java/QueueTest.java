@@ -78,4 +78,50 @@ public class QueueTest {
         Assertions.assertEquals(5, queue.size());
     }
 
+    @Test
+    public void Empty_Queue_pop_One_Value() {
+        // Arrange
+        Queue queue = new Queue();
+
+        // Act
+        Integer pop_value = queue.pop();
+
+        // Assert
+        Assertions.assertEquals(null, queue.head());
+        Assertions.assertEquals(null, queue.tail());
+        Assertions.assertEquals(0, queue.size());
+        Assertions.assertEquals(null, pop_value);
+    }
+
+    @Test
+    public void Filled_Queue_pop_One_Value() {
+        // Arrange
+        Queue queue = new Queue(new ArrayList<Integer>(Arrays.asList(1,2,3)));
+
+        // Act
+        Integer pop_value = queue.pop();
+
+        // Assert
+        Assertions.assertEquals(2, queue.head());
+        Assertions.assertEquals(1, queue.tail());
+        Assertions.assertEquals(2, queue.size());
+        Assertions.assertEquals(3, pop_value);
+    }
+
+    @Test
+    public void Filled_Queue_pop_Many_Values() {
+        // Arrange
+        Queue queue = new Queue(new ArrayList<Integer>(Arrays.asList(1,2,3)));
+
+        // Act
+        queue.pop();
+        queue.pop();
+        Integer pop_value = queue.pop();
+
+        // Assert
+        Assertions.assertEquals(null, queue.head());
+        Assertions.assertEquals(null, queue.tail());
+        Assertions.assertEquals(0, queue.size());
+        Assertions.assertEquals(1, pop_value);
+    }
 }

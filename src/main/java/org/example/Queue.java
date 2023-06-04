@@ -38,4 +38,13 @@ public class Queue {
     public void push(int i) {
         queue.add(0, i);
     }
+
+    public Integer pop() {
+
+        if (queue.size() == 0) {
+            return null;
+        }
+
+        return queue.remove(queue.size()-1);
+    }
 }
