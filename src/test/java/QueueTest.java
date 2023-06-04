@@ -42,6 +42,7 @@ public class QueueTest {
         // Assertion
         Assertions.assertEquals(3, queue.size());
         Assertions.assertEquals(3, head_value);
+        Assertions.assertEquals(1, queue.tail());
 
     }
 
