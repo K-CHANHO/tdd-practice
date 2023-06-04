@@ -6,7 +6,14 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * 요구사항
+ * 초기화(빈 배열, 초기값 설정 가능하게) v
+ * 사이즈 조회 v
+ * First In, Last Out (pop, push)
+ * head 정보 조회
+ */
 
 class StackTest {
 
@@ -27,5 +34,25 @@ class StackTest {
         // Assert
         Assertions.assertEquals(3, stack.size());
     }
+
+    @Test
+    public void empty_stack_head() {
+        // Arrange, Act
+        Stack stack = new Stack();
+
+        // Asssert
+        Assertions.assertEquals(null, stack.head());
+    }
+
+    @Test
+    public void filled_stack_head() {
+        // Arrange, Act
+        Stack stack = new Stack(new ArrayList<Integer>(Arrays.asList(1,2,3)));
+
+        // Asssert
+        Assertions.assertEquals(3, stack.head());
+    }
+
+
 
 }

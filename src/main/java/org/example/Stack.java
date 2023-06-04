@@ -18,4 +18,11 @@ public class Stack {
     public int size() {
         return stack.size();
     }
+
+    public Integer head() {
+        if(stack.size() == 0)
+            return null;
+
+        return stack.get(stack.size()-1);
+    }
 }
