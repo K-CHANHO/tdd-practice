@@ -2,10 +2,8 @@ import org.example.Queue;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * 큐
@@ -124,4 +122,5 @@ public class QueueTest {
         Assertions.assertEquals(0, queue.size());
         Assertions.assertEquals(1, pop_value);
     }
+
 }
