@@ -29,4 +29,12 @@ public class Stack {
     public void push(int i) {
         stack.add(i);
     }
+
+    public Integer pop() {
+        if(stack.size() == 0)
+            return null;
+
+
+        return stack.remove(stack.size()-1);
+    }
 }

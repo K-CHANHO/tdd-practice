@@ -68,6 +68,79 @@ class StackTest {
         Assertions.assertEquals(4, stack.size());
     }
 
+    @Test
+    public void empty_stack_pop() {
+        // Arrange
+        Stack stack = new Stack();
+
+        // Act
+        Integer pop_value = stack.pop();
+
+        // Assert
+        Assertions.assertEquals(null, pop_value);
+
+    }
+
+    @Test
+    public void filled_stack_pop() {
+        // Arrange
+        Stack stack = new Stack(new ArrayList<Integer>(Arrays.asList(5,6,7)));
+
+        // Act
+        Integer pop_value = stack.pop();
+
+        // Assert
+        Assertions.assertEquals(7, pop_value);
+
+    }
+
+    @Test
+    public void stack_pop_one_value() {
+        // Arrange
+        Stack stack = new Stack(new ArrayList<Integer>(Arrays.asList(5,6,7)));
+
+        // Act
+        Integer pop_value = stack.pop();
+
+        // Assert
+        Assertions.assertEquals(7, pop_value);
+        Assertions.assertEquals(2, stack.size());
+
+    }
+
+    @Test
+    public void stack_pop_many_value() {
+        // Arrange
+        Stack stack = new Stack(new ArrayList<Integer>(Arrays.asList(5,6,7)));
+
+        // Act
+        stack.pop();
+        stack.pop();
+        Integer pop_value = stack.pop();
+
+        // Assert
+        Assertions.assertEquals(5, pop_value);
+        Assertions.assertEquals(0, stack.size());
+
+    }
+
+    @Test
+    public void stack_pop_more_than_size() {
+        // Arrange
+        Stack stack = new Stack(new ArrayList<Integer>(Arrays.asList(5,6,7)));
+
+        // Act
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        Integer pop_value = stack.pop();
+
+        // Assert
+        Assertions.assertEquals(null, pop_value);
+        Assertions.assertEquals(0, stack.size());
+
+    }
 
 
 
