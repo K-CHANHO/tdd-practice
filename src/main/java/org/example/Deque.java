@@ -39,6 +39,16 @@ public class Deque {
 		if(deque.size() == 0)	return null;
 		return deque.remove(deque.size() - 1);
 	}
+
+	public void shift(int i) {
+		deque.add(0, i);
+	}
+
+	public Integer unshift() {
+		if(deque.size() == 0) return null;
+		
+		return deque.remove(0);
+	}
 	
 	
 }
