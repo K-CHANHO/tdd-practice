@@ -18,6 +18,18 @@ public class Deque {
 	public Integer size() {
 		return deque.size();
 	}
+
+	public Integer head() {
+		if(deque.size() == 0) return null;
+		
+		return deque.get(deque.size() - 1);
+	}
+
+	public Integer tail() {
+		if(deque.size() == 0) return null;
+		
+		return deque.get(0);
+	}
 	
 	
 }
