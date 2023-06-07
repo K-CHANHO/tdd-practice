@@ -30,6 +30,15 @@ public class Deque {
 		
 		return deque.get(0);
 	}
+
+	public void push(int i) {
+		deque.add(i);
+	}
+
+	public Integer pop() {
+		if(deque.size() == 0)	return null;
+		return deque.remove(deque.size() - 1);
+	}
 	
 	
 }
