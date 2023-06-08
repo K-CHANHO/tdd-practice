@@ -5,17 +5,11 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
-/**
- * 초기화
- * 
- *
- */
 @TestMethodOrder(value = OrderAnnotation.class)
 public class DequeTest {
 	
@@ -168,7 +162,7 @@ public class DequeTest {
 	
 	@Test
 	@DisplayName("Deque unshift 여러개")
-	@Order(11)
+	@Order(12)
 	public void filled_deque_unshift_multi() {
 		Deque deque = new Deque(new ArrayList<Integer>(Arrays.asList(2,4,6,8,10)));
 		
